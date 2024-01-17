@@ -29,6 +29,8 @@ public class HelloController {
     @ResponseBody
     public ModelAndView loginTry(@RequestParam("ID") String id, @RequestParam("PW") String password) {
         mav.setViewName("login");
+        mav.addObject("password", password);
+        mav.addObject("id", id);
         System.out.println(id);
         System.out.println(password);
         return mav;
