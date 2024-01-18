@@ -1,2 +1,2 @@
 # LoginPJT
-회사 Spring Boot 과제
+Spring Boot Login 성공 실패 기능
