@@ -4,24 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 페이지</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <h2> 로그인</h2>
-    </div>
-    <form method="post" action="/login/try" style="text-align: center;">
-        <input type="text" name="ID" placeholder="아이디를 입력해주세요.">
-        <br>
-        <input type="password" name="PW" placeholder="비밀번호를 입력해주세요.">
-        <br>
-        <input type="submit" value="로그인">
+    <form th:action="@{/login}" method="post">
+        <label>Username: <input type="text" name="username" /></label>
+        <label>Password: <input type="password" name="password" /></label>
+        <button type="submit">Login</button>
     </form>
-    <div style="text-align: center;">
-        <h2> 입력된 ID = <p th:text="${id}"></p></h2>
-        <h2> 입력된 PW = <p th:text="${password}"></p></h2>
-    </div>
+    <p th:text="${error}"></p>
+    <p th:text="${login}"></p>
 </body>
 
 </html>
