@@ -13,6 +13,7 @@ import hello.hello.spring.DTO.UserT;
 import java.util.*;
 
 // REST API 테스트 컨트롤러 < postman 에서 JSON 형식의 데이터 보내면 CRUD 가능 >
+// 단점 - 앱 재시작 시 초기화 작업도 진행됨.
 
 @RestController
 @RequestMapping("/api/users")
